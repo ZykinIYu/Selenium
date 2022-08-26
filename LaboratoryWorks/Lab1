@@ -1,1 +1,14 @@
-Лабораторная работа 1
+Лабораторная работа 1. "CSS локатор и простые действия над элементом"
+
+Необходимо выполнить:
+1. Перейти на страницу https://chercher.tech/practice/dropdowns
+2. Перебрать все значения из выпадающего списка "Products"
+3. Перебрать все значения из выпадающего списка "Animals"
+4. Раскрыть выпадающий список "Dropdown can Be made using" и проверить его значения
+5. В разделе "Multi Value Dropdown" выбрать "Pizza"
+6. В разделе "Multi Value Dropdown" выбрать "Donut"
+7. В разделе "Multi Value Dropdown" выбрать "Burger"
+8. В разделе "Multi Value Dropdown" выбрать "Bonda"
+9. В разделе "Multi Value Dropdown" выделить все значения.
+
+Справочная информация:
