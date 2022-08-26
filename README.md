@@ -4,4 +4,4 @@
 4. new Actions(driver).moveToElement(drag).keyDown(Keys.CONTROL).clickAndHold()
 .moveToElement(drop).release().keyUp(Keys.CONTROL).perform();                    //Сложные действия
 5. driver.FindElement(By.Xpath("//*[contains(@class, 'Текст')]"))                //Локатор построенный на поиске определенного текста, можно использовать ка кпроверки
-6. Assert //проверка соответствия**
+6. Assert //проверка соответствия
