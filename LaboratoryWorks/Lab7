@@ -17,5 +17,8 @@
 14. Нажать кнопку "Button"
 15. Нажать "Check Checkbox after 10 seconds"
 16. Дождаться когда checkbox станет заполненным
-
-Справочная информация:
+17. wait.until(visibilityOf(element))
+18. wait.until(visibilityOfAllElements(elementList))
+19. wait.until(not(visibilityOf(element)))
+20. wait.until(invisibilityOfAllElements(elementList))
+21. wait.until(visibilityOfElementLocated(locator))
