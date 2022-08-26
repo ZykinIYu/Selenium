@@ -1,0 +1,21 @@
+Лабораторная работа 7. "Явные ожидания"
+
+Необходимо выполнить:
+1. Перейти на страницу https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver
+2. Нажать "Click me, to Open an alert after 5 seconds"
+3. Дождаться модального окна
+4. Проверить текст модального окна
+5. Закрыть модальное окно
+6. Нажать "Change Text to Selenium Webdriver"
+7. Дождаться когда "site" станет "Selenium Webdriver"
+8. Нажать "Display button after 10 seconds"
+9. Дождаться когда появится кнопка "Enabled"
+10. Нажать кнопку "Enabled"
+11. Дождаться когда кнопка "Enabled" исчезнет
+12. Нажать "Enable button after 10 seconds"
+13. Дождаться когда кнопка "Button" станет кликабельной
+14. Нажать кнопку "Button"
+15. Нажать "Check Checkbox after 10 seconds"
+16. Дождаться когда checkbox станет заполненным
+
+Справочная информация:
