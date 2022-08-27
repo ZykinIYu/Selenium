@@ -44,6 +44,21 @@ driver.FindElement(By.CssSelector("label.error"));              //По тегу 
 driver.FindElement(By.CssSelector("label.error.fatal"));        //По тегу и двум классам
 driver.FindElement(By.CssSelector("label.error[for = email]")); //По тегу, классу и атрибуту
 
+//Отрицание условий
+driver.FindElement(By.CssSelector("label:not(.error)"));        //Сообщения не об ошибках
+driver.FindElement(By.CssSelector("input:not([type = text])")); //Нетекстовые поля ввода
+driver.FindElement(By.CssSelector("a:not([href ^= http])"));    //Локальные ссылки
+
+//Движение по дереву
+driver.FindElement(By.CssSelector("div#main p"));                      //p где-то внутри блока div#main
+driver.FindElement(By.CssSelector("div#main > p"));                    //p непосредственно внутри div#main
+driver.FindElement(By.CssSelector("div#main li:first-child"));         //Первый элемент списка
+driver.FindElement(By.CssSelector("div#main li:last-child"));          //Последний элемент списка
+driver.FindElement(By.CssSelector("div#main li:nth-child(1)"));        //Элемент списка по номеру
+driver.FindElement(By.CssSelector("div#header > div:nth-of-type(1)")); //Из всех детей родителя берется только кто имеет нужный тип и по номеру
+
+
+
 
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
 2. driver.FindElement(By.CssSelector("локатор")).SendKeys(“Текст ввода”);        //Ввод текста
