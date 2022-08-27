@@ -30,12 +30,18 @@ driver.FindElement(By.LinkText("Локатор"));        //Поиск по те
 driver.FindElement(By.PartialLinkText("Локатор")); //Поиск по частичному тексту ссылки
 driver.FindElement(By.XPath("Локатор"));           //Поиск с помощью XPath запросов
 
-//Проверка значения атрибута
+//Проверка значения атрибута CssSelector
 driver.FindElement(By.CssSelector("[checked]"));       //Наличие атрибута
 driver.FindElement(By.CssSelector("[name = email]"));  //Совпадение значения
 driver.FindElement(By.CssSelector("[title *= Name]")); //Содержится текст
 driver.FindElement(By.CssSelector("[src ^= http]"));   //Начинается с текста
 driver.FindElement(By.CssSelector("[src $= .pdf]"));   //Заканчивается текстом
+
+//Проверка значения атрибута XPath
+driver.FindElement(By.XPath("//*[@checked]"));                  //Наличие атрибута
+driver.FindElement(By.XPath("//*[@name='email']"));             //Совпадение значения
+driver.FindElement(By.XPath("//*[contains(@title, 'Name')]"));  //Содержится текст
+driver.FindElement(By.XPath("//*[starts-with(@src, 'http')]")); //Начинается с текста
 
 //Комбинация условий
 driver.FindElement(By.CssSelector("label"));                    //По тегу
