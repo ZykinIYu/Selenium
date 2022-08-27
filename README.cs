@@ -43,25 +43,55 @@ driver.FindElement(By.XPath("//*[@name='email']"));             //Совпаде
 driver.FindElement(By.XPath("//*[contains(@title, 'Name')]"));  //Содержится текст
 driver.FindElement(By.XPath("//*[starts-with(@src, 'http')]")); //Начинается с текста
 
-//Комбинация условий
+//Комбинация условий CssSelector
 driver.FindElement(By.CssSelector("label"));                    //По тегу
 driver.FindElement(By.CssSelector(".error"));                   //По классу
 driver.FindElement(By.CssSelector("label.error"));              //По тегу и классу
 driver.FindElement(By.CssSelector("label.error.fatal"));        //По тегу и двум классам
 driver.FindElement(By.CssSelector("label.error[for = email]")); //По тегу, классу и атрибуту
 
+//Комбинация условий XPath
+driver.FindElement(By.XPath("//label"));                                                                           //По тегу 
+driver.FindElement(By.XPath("//*[contains(@class, 'error')]"));                                                    //По классу
+driver.FindElement(By.XPath("//label[contains(@class, 'error')]"));                                                //По тегу и классу
+driver.FindElement(By.XPath("//label[contains(@class, 'error') and contains(@class, 'fatal')]"));                  //По тегу и двум классам
+driver.FindElement(By.XPath("//label[contains(@class, 'error') and contains(@class, 'fatal') and @for='email']")); //По тегу, классу и атрибуту
+
 //Отрицание условий
 driver.FindElement(By.CssSelector("label:not(.error)"));        //Сообщения не об ошибках
 driver.FindElement(By.CssSelector("input:not([type = text])")); //Нетекстовые поля ввода
 driver.FindElement(By.CssSelector("a:not([href ^= http])"));    //Локальные ссылки
 
-//Движение по дереву
+//Движение по дереву CssSelector
 driver.FindElement(By.CssSelector("div#main p"));                      //p где-то внутри блока div#main
 driver.FindElement(By.CssSelector("div#main > p"));                    //p непосредственно внутри div#main
 driver.FindElement(By.CssSelector("div#main li:first-child"));         //Первый элемент списка
 driver.FindElement(By.CssSelector("div#main li:last-child"));          //Последний элемент списка
 driver.FindElement(By.CssSelector("div#main li:nth-child(1)"));        //Элемент списка по номеру
 driver.FindElement(By.CssSelector("div#header > div:nth-of-type(1)")); //Из всех детей родителя берется только кто имеет нужный тип и по номеру
+
+//Движение по дереву XPath
+driver.FindElement(By.XPath("//div[@id='main']//p"));                           //p где-то внутри блока div#main
+driver.FindElement(By.XPath("//div[@id='main']/p"));                            //p непосредственно внутри div#main
+driver.FindElement(By.XPath("//div[@id='main']/div[1]"));                       //Из всех детей родителя берется только кто имеет нужный тип и по номеру
+driver.FindElement(By.XPath("//input[@id='search']/../input[@type='button']")); //Движение по дереву снизу вверх
+
+//Поиск по тексту с помощью XPath
+driver.FindElement(By.XPath("//a[contains(., 'Edit')]"));
+
+//Формирование подзапросов с помощью XPath
+driver.FindElement(By.XPath("//form[.//input[@name='password']]"));
+
+//Контекст поиска
+input = driver.FindElement(By.Name("password"));
+form = driver.FindElement(By.Id("login-modal"));
+input = form.FindElement(By.Name("password")); 
+/*Данная запись не равна, записи ниже*/
+input = driver.FindElement(By.CssSelector("#login-modal [name=password]"));
+
+//Относительные запросы XPath
+form = driver.FindElement(By.Id("login-modal"));
+input = form.FindElement(By.XPath(".//input[@name='password']"));
 
 
 
