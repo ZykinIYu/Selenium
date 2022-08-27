@@ -16,6 +16,27 @@ private WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10))
 //Закрыть браузер
 driver.Quit();
 
+//Команды поиска
+IWebElement element = driver.FindElement(<локатор>);                      //Поиск и запись первого найденного элемента
+ReadOnlyCollection<IWebElement> elements = driver.findElements(<локатор>) //Поиск и запись всех найденных элементов в массив
+
+//Стратегии поиска
+driver.FindElement(By.Id("Локатор"));              //Поиск по ID
+driver.FindElement(By.TagName("Локатор"));         //Поиск по тегу
+driver.FindElement(By.ClassName("Локатор"));       //Поиск по классу
+driver.FindElement(By.CssSelector("Локатор"));     //Поиск с помощью CssSelector запросов
+driver.FindElement(By.Name("Локатор"));            //Поиск по Имени
+driver.FindElement(By.LinkText("Локатор"));        //Поиск по тексту ссылки
+driver.FindElement(By.PartialLinkText("Локатор")); //Поиск по частичному тексту ссылки
+driver.FindElement(By.XPath("Локатор"));           //Поиск с помощью XPath запросов
+
+//Проверка значения атрибута
+driver.FindElement(By.CssSelector("[checked]"));       //Наличие атрибута
+driver.FindElement(By.CssSelector("[name = email]"));  //Совпадение значения
+driver.FindElement(By.CssSelector("[title *= Name]")); //Содержится текст
+driver.FindElement(By.CssSelector("[src ^= http]"));   //Начинается с текста
+driver.FindElement(By.CssSelector("[src $= .pdf]"));   //Заканчивается текстом
+
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
 2. driver.FindElement(By.CssSelector("локатор")).SendKeys(“Текст ввода”);        //Ввод текста
 3. driver.FindElement(By.CssSelector("локатор")).Clear();                        //Очистка поля от текста
