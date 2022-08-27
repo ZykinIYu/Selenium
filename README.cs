@@ -107,7 +107,12 @@ driver.FindElement(By.XPath("//label")).GetCssValue("propertyName");
 var a = driver.FindElement(By.XPath("//label")).Size;     //Размер элемента (в пикселях)
 var b = driver.FindElement(By.XPath("//label")).Location; //Положение на странице
 
-
+//Простые действия над элементами
+driver.FindElement(By.XPath("//span[2]/button")).Click();                     //Нажатие на кликабельный элемент
+driver.FindElement(By.XPath("//span[2]/button")).Submit();                    //Нажатие на любой элемент
+driver.FindElement(By.XPath("//span[2]/button")).SendKeys("Текст для ввода"); //Печать текста
+driver.FindElement(By.XPath("//span[2]/button")).SendKeys(Keys.Enter);        //Имитация нажатия кнопки на клавиатуре
+driver.FindElement(By.XPath("//span[2]/button")).Clear();                     //Очистка поля для ввода
 
 
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
