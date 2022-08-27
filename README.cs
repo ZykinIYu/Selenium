@@ -93,6 +93,20 @@ input = driver.FindElement(By.CssSelector("#login-modal [name=password]"));
 form = driver.FindElement(By.Id("login-modal"));
 input = form.FindElement(By.XPath(".//input[@name='password']"));
 
+//Получение аттрибутов элементов
+driver.FindElement(By.XPath("//label")).GetAttribute("value"); //Содержимое полей ввода
+driver.FindElement(By.XPath("//label")).GetAttribute("href");  //Нормализация адресов
+driver.FindElement(By.XPath("//label")).GetAttribute("src");   //Нормализация адресов
+driver.FindElement(By.XPath("//label")).GetAttribute("true");  //Булевские атрибуты
+driver.FindElement(By.XPath("//label")).GetAttribute("null");  //Булевские атрибуты
+
+//Получение стиля элемента
+driver.FindElement(By.XPath("//label")).GetCssValue("propertyName");
+
+//Получение размера и положения
+var a = driver.FindElement(By.XPath("//label")).Size;     //Размер элемента (в пикселях)
+var b = driver.FindElement(By.XPath("//label")).Location; //Положение на странице
+
 
 
 
