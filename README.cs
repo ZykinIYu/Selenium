@@ -1,5 +1,21 @@
+//Необходимые NuGet пакеты:
+//1. DotNetSeleniumExtras.WaitHelpers 3.11.0
+//2. NSelene 1.0.0-alpha10
+//3. NUnit 3.12.0
+//4. NUnit3TestAdapter 3.16.1
+//5. Selenium.Support 4.4.0
+//6. Selenium.WebDriver 4.4.0
+//7. Selenium.WebDriver.ChromeDriver ВЕРСИЯ ДРАЙВЕРА ЗАВИСИТ ОТ БРАУЗЕРА
+
 //Инициализация браузера
 private IWebDriver driver = new ChromeDriver();
+
+//Инициализация wait
+private WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+//Закрыть браузер
+driver.Quit();
+
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
 2. driver.FindElement(By.CssSelector("локатор")).SendKeys(“Текст ввода”);        //Ввод текста
 3. driver.FindElement(By.CssSelector("локатор")).Clear();                        //Очистка поля от текста
