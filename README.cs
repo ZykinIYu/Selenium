@@ -1,3 +1,5 @@
+//Инициализация браузера
+private IWebDriver driver = new ChromeDriver();
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
 2. driver.FindElement(By.CssSelector("локатор")).SendKeys(“Текст ввода”);        //Ввод текста
 3. driver.FindElement(By.CssSelector("локатор")).Clear();                        //Очистка поля от текста
