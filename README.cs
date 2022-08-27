@@ -114,6 +114,17 @@ driver.FindElement(By.XPath("//span[2]/button")).SendKeys("Текст для в�
 driver.FindElement(By.XPath("//span[2]/button")).SendKeys(Keys.Enter);        //Имитация нажатия кнопки на клавиатуре
 driver.FindElement(By.XPath("//span[2]/button")).Clear();                     //Очистка поля для ввода
 
+//Сложные действия над элементами
+            new Actions(driver)
+                .MoveToElement(driver.FindElement(By.XPath("//span[2]/button"))) //Перевести курсор на элемент
+                .KeyDown(Keys.Control)                                           //Зажать кнопку Control
+                .ClickAndHold()                                                  //Нажать и удерживать кнопку мыши
+                .MoveToElement(driver.FindElement(By.XPath("//span[3]/button"))) //Перевести курсор на элемент
+                .Release()                                                       //Отпустить кнопку мыши
+                .KeyUp(Keys.Control)                                             //Отпустить кнопку Control
+                .DoubleClick()                                                   //Двойной клик кнопкой мыши
+                .Perform();                                                      //Закончить сложную операцию
+
 
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
 2. driver.FindElement(By.CssSelector("локатор")).SendKeys(“Текст ввода”);        //Ввод текста
