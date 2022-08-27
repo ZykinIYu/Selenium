@@ -37,6 +37,14 @@ driver.FindElement(By.CssSelector("[title *= Name]")); //Содержится т
 driver.FindElement(By.CssSelector("[src ^= http]"));   //Начинается с текста
 driver.FindElement(By.CssSelector("[src $= .pdf]"));   //Заканчивается текстом
 
+//Комбинация условий
+driver.FindElement(By.CssSelector("label"));                    //По тегу
+driver.FindElement(By.CssSelector(".error"));                   //По классу
+driver.FindElement(By.CssSelector("label.error"));              //По тегу и классу
+driver.FindElement(By.CssSelector("label.error.fatal"));        //По тегу и двум классам
+driver.FindElement(By.CssSelector("label.error[for = email]")); //По тегу, классу и атрибуту
+
+
 1. driver.FindElement(By.CssSelector("локатор")).Click();                        //Нажатие по элементу
 2. driver.FindElement(By.CssSelector("локатор")).SendKeys(“Текст ввода”);        //Ввод текста
 3. driver.FindElement(By.CssSelector("локатор")).Clear();                        //Очистка поля от текста
