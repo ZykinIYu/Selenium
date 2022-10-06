@@ -7,6 +7,9 @@
 //6. Selenium.WebDriver 4.4.0
 //7. Selenium.WebDriver.ChromeDriver ВЕРСИЯ ДРАЙВЕРА ЗАВИСИТ ОТ БРАУЗЕРА
 
+//Необходимые расширения
+NUnit 3 Test Adapter
+
 //Инициализация браузера
 private IWebDriver driver = new ChromeDriver();
 
@@ -124,3 +127,37 @@ driver.FindElement(By.XPath("//span[2]/button")).Clear();                     //
                 .KeyUp(Keys.Control)                                             //Отпустить кнопку Control
                 .DoubleClick()                                                   //Двойной клик кнопкой мыши
                 .Perform();                                                      //Закончить сложную операцию
+
+//Работа с Alert
+driver.SwitchTo().Alert().SendKeys("Текст"); //Ввод текста в Alert
+driver.SwitchTo().Alert().Accept();          //Имитация нажатия "Ok"
+driver.SwitchTo().Alert().Dismiss();         //Имитация нажатия "Отмена"
+
+//Работа с окнами
+var c = driver.WindowHandles;       //Запоминаем идентификатор текущего окна
+var d = driver.CurrentWindowHandle; //Запоминаем идентификаторы всех открытых окон
+driver.SwitchTo().Window(c);        //Переключение на другое окно
+driver.SwitchTo().NewWindow();      //
+driver.Close();                     //Закрыть текущее окно
+driver.Quit();                      //Закрыть все открытые окна
+
+//Операции с фреймами
+driver.SwitchTo().Frame(driver.FindElement(By.CssSelector("#frame"))); //Переключение во фрейм
+driver.SwitchTo().DefaultContent();                                    //Выход из фрейма на главную страницу
+driver.SwitchTo().ParentFrame();                                       //Выход из фрейма на уровень выше
+
+//Размер и положение окон
+var f = driver.Manage().Window.Position; //Запись положения окна
+driver.Manage().Window.Minimize();       //Задать минимальный размер окна
+driver.Manage().Window.Maximize();       //Задать максимальный размер окна
+driver.Manage().Window.FullScreen();     //Перевести окно в полноэкранный режим
+var g = driver.Manage().Window.Size;     //Запись размера окна
+
+//Работа с неявными ожиданиями
+
+//Работа с явными ожиданиями
+
+//Фреймворк NSelen
+
+
+
