@@ -185,3 +185,6 @@ S("[name = 'q']", driver).Should(Be.Visible).PressTab(); //Нажать Tab
 S("[name = 'q']", driver).Should(Be.Visible).SendKeys("Текст"); //Ввод текста
 S("[name = 'q']", driver).Should(Be.Visible).SetValue("Текст"); //Стереть текст в поле и ввести заного
 
+//NUnit
+NUnit.Framework.Assert.IsFalse(driver.PageSource.Contains("Текст"));
+
