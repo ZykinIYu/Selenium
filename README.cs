@@ -154,10 +154,34 @@ driver.Manage().Window.FullScreen();     //Перевести окно в пол
 var g = driver.Manage().Window.Size;     //Запись размера окна
 
 //Работа с неявными ожиданиями
+driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30); //Ожидание  прогрузки сраницы не более 30 секунд
 
 //Работа с явными ожиданиями
+wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector("[name = 'q']"))); //Ожидание кликабельности элемента
+wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("[name = 'q']"))); //Ожидание видимости элемента
 
-//Фреймворк NSelen
+//Фреймворк NSelen, проверки с локатором
+S("[name = 'q']", driver).Should(Be.Blank); //Поиск элемента по локатору и проверка что он пустой
+S("[name = 'q']", driver).Should(Be.Enabled); //Поиск элемента по локатору и проверка что он есть на странице
+S("[name = 'q']", driver).Should(Be.InDom); //Поиск элемента по локатору и проверка что он существует в DOM дереве
+S("[name = 'q']", driver).Should(Be.Selected); //Поиск элемента по локатору и проверка что он выбран
+S("[name = 'q']", driver).Should(Be.Visible); //Поиск элемента по локатору и проверка что он видимый
+S("[name = 'q']", driver).Should(Be.Not.Blank); //Поиск элемента по локатору и проверка что он не пустой
+S("[name = 'q']", driver).Should(Be.Not.Enabled); //Поиск элемента по локатору и проверка что он отсутствует на странице
+S("[name = 'q']", driver).Should(Be.Not.InDom); //Поиск элемента по локатору и проверка что он не существует в DOM дереве
+S("[name = 'q']", driver).Should(Be.Not.Selected); //Поиск элемента по локатору и проверка что он не выбран
+S("[name = 'q']", driver).Should(Be.Not.Visible);              //Поиск элемента по локатору и проверка что он не видимый
+S("[name = 'q']", driver).Should(Have.Text("Какой то текст")); //Поиск элемента по локатору и проверка что в элементе есть указанный текст
+S("[name = 'q']", driver).Should(Have.No.Text("Какой то текст")); //Поиск элемента по локатору и проверка что в элементе нет указанного текста
 
-
+//Фреймворк NSelen, действия
+S("[name = 'q']", driver).Should(Be.Visible).Clear(); //Стереть значение в поле
+S("[name = 'q']", driver).Should(Be.Visible).Click(); //Клик
+S("[name = 'q']", driver).Should(Be.Visible).DoubleClick(); //Двойной клик
+S("[name = 'q']", driver).Should(Be.Visible).Hover(); //Навести курсор
+S("[name = 'q']", driver).Should(Be.Visible).PressEnter(); //Нажать Enter
+S("[name = 'q']", driver).Should(Be.Visible).PressEscape(); //Нажать Esc
+S("[name = 'q']", driver).Should(Be.Visible).PressTab(); //Нажать Tab
+S("[name = 'q']", driver).Should(Be.Visible).SendKeys("Текст"); //Ввод текста
+S("[name = 'q']", driver).Should(Be.Visible).SetValue("Текст"); //Стереть текст в поле и ввести заного
 
