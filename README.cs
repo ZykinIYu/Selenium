@@ -134,8 +134,8 @@ driver.SwitchTo().Alert().Accept();          //Имитация нажатия "
 driver.SwitchTo().Alert().Dismiss();         //Имитация нажатия "Отмена"
 
 //Работа с окнами
-var c = driver.WindowHandles;       //Запоминаем идентификатор текущего окна
-var d = driver.CurrentWindowHandle; //Запоминаем идентификаторы всех открытых окон
+var c = driver.WindowHandles;       //Запоминаем идентификаторы всех открытых окон
+var d = driver.CurrentWindowHandle; //Запоминаем идентификатор текущего окна
 driver.SwitchTo().Window(c);        //Переключение на другое окно
 driver.SwitchTo().NewWindow();      //
 driver.Close();                     //Закрыть текущее окно
