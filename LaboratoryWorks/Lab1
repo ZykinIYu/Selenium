@@ -23,14 +23,3 @@
 6. Выбрать Impressive
 7. Проверить что появилась надпись Impressive
 8. Проверить что кнопка No недоступна
-
-Написать 4 тест
-1. Перейти на страницу https://demoqa.com/
-2. Перейти в раздел 'Elements'
-3. Выбрать пункт 'Buttons'
-4. Нажать на кнопку Click Me
-5. Проверить что появилась надпись You have done a dynamic click
-6. Сделать двойной клик на кнопку Double Click Me
-7. Проверить что появилась надпись You have done a double click
-8. Сделать клик правой кнопкой кнопку Right Click Me
-9. Проверить что появилась надпись You have done a right click
