@@ -25,10 +25,3 @@
 4. В поле 'Type multiple color names' выбрать значения: Black, Red, Magenta
 5. В поле 'Type single color name' выбрать значения: Black
 5. В поле 'Type single color name' заменить значения на Red
-
-Написать 16 тест
-1. Перейти на страницу https://demoqa.com/
-2. Перейти в раздел 'Widgets'
-3. Выбрать пункт 'Date Picker'
-4. В поле 'Select Date' выбрать 1 декабря 2023 годя
-5. В поле 'Date And Time' 2 ноября 2022 года 20:00
