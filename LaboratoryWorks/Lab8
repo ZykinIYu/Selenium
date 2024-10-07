@@ -1,7 +1,22 @@
-Лабораторная работа 8. "Не явные ожидания"
-
-Необходимо выполнить:
-1. Перейти на страницу https://chercher.tech/practice/implicit-wait-example
-2. Дождаться появления Check box
-3. Нажать Check box
-4. повторять пункты 2 и 3 пока не будут заполнены 6 Check box.
+Написать 22 тест
+1. Перейти на страницу https://demoqa.com/
+2. Перейти в раздел 'Book Store Application'
+3. Выбрать пункт 'Login'
+4. Ввести UserName
+5. Ввести Password
+6. Нажать Login
+7. Проверить что появилась надпись Invalid username or password!
+8. Нажать NewUser
+9. Заполнить First Name
+10. Заполнить Last Name
+11. Заполнить UserName
+12. Заполнить Password 1 символом
+13. Нажать Register
+14. Проверить что появилась надпись Please verify reCaptcha to register!
+15. Поставить чек бокс I`m not a robot
+16. Нажать Register
+17. Проверить что появилась надпись Passwords must have at least one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z'), one lowercase ('a'-'z'), one special character and Password must be eight characters or longer.
+18. Заполнить Password валидным значением
+19. Поставить чек бокс I`m not a robot
+20. Нажать Register
+21. В модальном окне нажать ОК
