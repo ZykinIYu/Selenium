@@ -1,3 +1,20 @@
+Написать 19 тест
+1. Перейти на страницу https://demoqa.com/
+2. Перейти в раздел 'Widgets'
+3. Выбрать пункт 'Select Menu'
+4. В поле 'Select Value' выбрать 'A root option'
+5. В поле 'Select One' выбрать 'Ms.'
+6. В поле 'Old Style Select Menu' выбрать 'Black'
+7. В поле 'Multiselect drop down' выбрать: Black, Red
+8. В поле 'Standard multi select' выбрать 'Opel'
+
+Написать 20 тест
+1. Перейти на страницу https://demoqa.com/
+2. Перейти в раздел 'Interaction'
+3. Выбрать пункт 'Sortable'
+4. Перейти на вкладку List
+5. Отсортировать значения в убывающем порядке
+
 Написать 21 тест
 1. Перейти на страницу https://demoqa.com/
 2. Перейти в раздел 'Interaction'
